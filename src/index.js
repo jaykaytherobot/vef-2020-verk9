@@ -1,6 +1,12 @@
-import { el, element, formatDate } from './lib/utils';
-// importa öðru sem þarf...
+import { populateSite } from './lib/geodataUsage';
+import { fetchEarthquakes } from './lib/earthquakes';
+import { init } from './lib/map';
+
 
 document.addEventListener('DOMContentLoaded', async () => {
-  // Hér er allt „vírað“ saman
+  const eqList = document.querySelector('.earthquakes');
+  const earthquakes = fetchEarthquakes();
+
+  init('mapid');
+  populateSite(eqList, earthquakes);
 });
