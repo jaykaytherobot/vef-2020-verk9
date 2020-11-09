@@ -4,7 +4,7 @@
   "description": "my magnum opus",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint ./src/lib/* ./src/index.js",
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
     "browser-sync": "browser-sync start --server --files \"*\"",
