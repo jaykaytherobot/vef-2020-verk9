@@ -29,5 +29,6 @@ export async function populateSite(ul, earthquakes) {
           )
         );
       });
+      document.querySelector('.earthquakes-container').removeChild(document.querySelector('.loading'));
     });
 }
